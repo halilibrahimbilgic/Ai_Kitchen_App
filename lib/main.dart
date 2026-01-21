@@ -8,13 +8,16 @@ import 'package:http/http.dart' as http;
 import 'package:share_plus/share_plus.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+// 12. satırdaki mevcut main fonksiyonunu bununla değiştir:
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Flutter motorunu hazırla
+  await dotenv.load(fileName: ".env"); // .env dosyasını ocağa koy
   runApp(const MaterialApp(
       title: 'AI Mutfak Asistanı',
       debugShowCheckedModeBanner: false,
       home: AiMutfak()
   ));
+
 }
 
 // --- PREMIUM TASARIM SİSTEMİ (Eksiksiz) ---

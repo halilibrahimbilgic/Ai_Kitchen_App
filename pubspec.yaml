@@ -30,6 +30,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icon.png
+    - .env
 
 # DİKKAT: flutter_launcher_icons satırı EN SOLA dayalı olmalı!
 flutter_launcher_icons:
